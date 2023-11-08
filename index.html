@@ -7,16 +7,27 @@
 <link rel='stylesheet' href='scss/style.scss'>
 </head>
 <body>
+  <section>
+    <article>box</article>
+    <article>box</article>
+    <article>box</article>
+
+    <ul>
+      <li>button1</li>
+      <li calss="btn">button2</li>
+      <li>button3</li>
+    </ul>
+  </section>
   <script>
-   const colors = ['red','green','blue'];
-   
-   colors.forEach((data,index)=>{
-    console.log(colors[index]);
-    });
-
-  for(const data of colors) console.log(data);
-
-
+    const section = document.querySelector('section');
+    const articles = section.querySelectorAll('article');
+    const btn = section.querySelector('btn');
+    const childEl = section.children;
+    const parentEl = btn.parentElement;
+    const grandParentEl = btn.closest('section');
+    const prevEl = btn.previousElementSibling;
+    const nextEl = btn.nextElementSibling;
+    console.log(grandParentEl);
 
   </script>
 
